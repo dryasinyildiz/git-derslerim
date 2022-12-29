@@ -1,0 +1,15 @@
+Tarayıcı -> http://www.git-scm.com -> downloads
+
+İçerisindeki package dosyasına sağ tıklıyoruz -> open with -> installer.app ile açıyoruz.
+
+Bu aşamada bizden Xcode kurulumu da isteyebilir.
+
+İndirme/kurulum işleminin başarılı olup olmadığını kontrol ediyoruz -> VERSİYON KONTROLÜ ile.
+
+Terminal’i açıyoruz: git --version [enter]
+
+git --version [enter]
+git version 2.15.1
+
+
+// git version 2.15.1 gibi bir yanıt döndürülecek (yani kurulum gerçekleşmiş)
