@@ -1,0 +1,43 @@
+GIT, projelerimize verisyon oluşturmadan önce, bizden kullanıcı bilgilerimizin yapılandırılmasını ister.
+Bu işlem, değişiklikleri kimin yaptığını anlamamız için önemlidir.
+Komut satırında GIT ile bir işlem yapmadan önce, git kelimesini kullanacağız.
+
+MAC için: Mac terminalini açıyoruz.
+
+git --version [enter] // -'a dash deniyor.
+// bu satır, bize GIT'in versiyonunu döndüren bir komuttur.
+
+Eğer GIT ile ilgili, yapılandırılmış ayarlarımızı görmek istersek:
+
+git config --list [enter]
+// yapılandırılmış ayar bilgilerini listeli bir şekilde ekrana yazdırıyoruz.
+
+Eğer kurulumdan sonra herhangi bir işlem yapmadıysak:
+user.name
+user.email bilgileri bizim çıktımızda yer almayacak.
+// bunları yapılandırmamız gerekiyor.
+
+bunları yapılandırmak için de, yine GIT komutunu kullanıyoruz.
+
+git config --global
+// bu işlemleri global olarak yaptığımızı gösteren bir bayraktır.
+
+git config --global user.name "Yasin Yıldız" [enter]
+git config --global user.email "deneme@gmail.com" [enter]
+
+// şu anda GIT yapılandırmasını yaptık. bunu kontrol edelim:
+git config --list [enter] // diyerek yapılandırmamızı kontrol ediyoruz.
+
+Eğer sadece kullanıcı bilgisini veya sadece kullanıcı email bilgisine ihtiyaç duyarsak:
+
+git config --global user.name [enter]
+// Yasin Yıldız yanıtını gerş döndürüyor.
+
+Eğer hem kullanıcı adında bir değişiklik yapmak istersek; bu komutu tekrar çalıştırabiliriz.
+
+git config --global user.name "Yasin" [enter]
+// bundan sonra listelersek, kullanıcı adının değiştiğini görebiliriz.
+bunu da yine listeleyerek kontrol ediyoruz:
+
+git config --list [enter]
+
