@@ -1,0 +1,37 @@
+GIT REPOSITORY OLUŞTURMA:
+
+Terminal'imizi açıyoruz.
+masaüstümüze ilerliyoruz:
+
+cd Desktop [enter]
+
+masaüstü üzerinde bir klasör oluşturacağız.
+
+mkdir git-egitimi [enter]
+
+sonra bu oluşturduğumuz klasörün içerisine ilerliyoruz:
+
+cd git-egitimi [enter]
+
+// şu anda bu klasör altında herhangi bir şey (dosya vs) yok.
+
+ls -a [enter]
+komutuyla klasörümüz altındakileri ekrana yazıdıryoruz (gizli dosyalar dahil)
+
+// -   --   yanıtını döndürüyor. Yani boş bir klasör.
+
+bu klasör içerisinde, GIT repository oluşturmak için komutumuz:
+
+git init [enter]
+// "Initialized empty Git repository in Users/yasinyildiz/Desktop/git-egitimi/.git/" yanıtını döndürdü.
+
+yani Git repository'mizin oluştuğuna dair bir ekran çıktısı aldık.
+şu anda klasör içerisinde herhangi bir şey gözükmeyecek. Çünkü oluşan dosya, gizli bir dosyadır.
+bu dosya sayesinde, biz bu klasör altında git komutlarını çalıştırabiliyoruz.
+eğer biz bu klasör altındakileri ls -a komutuyla tekrar çalıştırırsak, .git isimli gizli bir dosyanın oluştuğunu görebiliriz:
+
+ls -a [enter]
+     .git
+     
+şimdi, herhangi bir çalışma alanımıza yani daha önceden oluşturduğumuz bir çalışma alanına git init komutunu nasıl uygulayacağımızı görelim:
+
