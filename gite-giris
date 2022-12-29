@@ -1,0 +1,23 @@
+GIT bir versiyon kontrol sistemidir.
+
+Dilediğimiz an, versiyonlar arası geçiş yapabiliriz (yedek oluşturma ve ihtiyaç anında bu yedeğe geri dönüş olarak da düşünülebilir).
+
+Güncellemelerimizi daha profesyonel olarak kaydederiz.
+
+Bu işlemler, birden fazla kişinin çalıştığı projelerde geliştiricilerin çalışma dizinini güncel tutmasını veya bir hata ile karşılaşıldığında o hatanın hangi güncelleme ile başladığını kolayca fark edebilmemizi sağlar.
+
+GIT, genellikle yazılım projelerinde kullanılsa da, hemen hemen bütün dosya formatlarını desteklediğinden birçok alanda kullanılabilir.
+
+Ör: word ile bir tez yazarken de, photoshop ile bir görsel hazırlarken de GIT kullanılabilir.
+
+GIT bir projeye dahil edildiğinde; gizli bir dosya olarak ilgili klasöre kurulur. Böylelikle GIT, çalışma dizinimizdeki dosyaları incelemeye (takip etmeye – TRACKING) başlar. Yaptığımız değişiklikler, GIT tarafından farkedilir. Ancak bu aşamada bir işlem uygulanmaz.
+
+Eğer yaptığımız değişiklikleri bir VERSİYON olarak kaydetmek istersek; önce değişiklikleri INDEXlememiz gerekiyor. Daha sonra indexlediğimiz bu dosyaları, LOCAL REPOSITORY’e eşitliyoruz.
+
+Bir dosya üzerinde birden fazla developer çalışıyor ise, lokal repository’e işlediğimiz yeni versiyondan diğer developerlar haberdar olamaz.
+
+Burada devreye uzak repository hizmeti/sunucuları girer (GitHub, GitLab ve BitBucket gibi). Bu üçü, uzak repository hizmeti veren ve en çok bilinen uzak sunuculardır.
+
+Eğer biz yaptığımız değişiklikleri uzak sunucuya gönderirsek; diğer developerlar projeminiz son sürümünden haberdar olup kendi çalışma dizinlerini güncelleyebilirler.
+
+Ayrıca uzak sunucuların bir diğer getirisi; bilgisayarımızın başına bir şey gelmesi durumunda, projemize uzak sunucudan hızlıca erişip, kaldığımız yerden devam edebilmemizi sağlamasıdır.
