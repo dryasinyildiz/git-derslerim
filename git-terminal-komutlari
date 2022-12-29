@@ -1,0 +1,91 @@
+pwd -> bu komutla, biz terminalde hangi komutları dosya içerisinde olduğumuzu görebiliyoruz. 
+
+Ör: Mac terminal'de:
+
+pwd [enter]
+/Users/yasinyildiz     yanıtını döndürdü.
+yani pwd komutu, bize o an içerisinde bulunduğumuz dosya yolunu döndürüyor.
+
+ls -> biz, içinde bulunduğumuz dosyanın, sahip olduğu dosya ve dizinlere ulaşabiliyoruz.
+
+cd -> dizinler arasında geçiş yapmamızı sağlayan komuttur.
+
+cd dedikten sonra gitmek istediğimiz dizin'in adını yazdığımızda; o dosyanın dizini'nin içerisine giriş yapıyoruz:
+
+cd Desktop [enter]
+
+ardından 
+pwd [enter] dediğimizde giriş yaptığımız yeri kontrol ediyoruz.
+
+/Users/yasinyildiz/Desktop yanıtını döndürür. Yani biz şu anda bu dizin içerisindeyiz.
+
+ls [enter]
+şu anda bulunduğumuz yerdeki, yani Desktop'umuzda olan klasör ve dosyaları görebiliyoruz: git.png webworks gibi
+
+Eğer biz bu klasör içerisindeki gizli dosyaları da görmek istersek:
+
+ls-a [enter]
+// gizli dosyaları da listeler
+
+Eğer bulunduğumuz dizinden "geriye" gitmek istersek:
+
+cd .. [enter]
+// böylece bir geri klasöre döneriz.
+
+Ör:
+cd yasinyildiz/Desktop [enter]
+// şu anda desktop'un içerisindeyiz.
+Burada bir klasör oluşturmak istersek:
+
+mkdir (açılımı -> make a directory)
+// sonrasında bir boşluk bırakıp oluşturmak istediğimiz klasörün adını yazıyoruz.
+
+mkdir webisleri [enter]
+// hemen içerisinde bulunduğumuz desktop'umuzda webisleri adında bir klasör oluştu.
+şimdi bu klasörün içerisine gireceğiz:
+
+cd webisleri [enter]
+// şimdi bu webisleri klasörünün içine girdik.
+
+Eğer bu kalsör içerisinde bir dosya oluşturmak istersek:
+// bunu touch komutuyla yapıyoruz. touch dedikten sonra, dosya ve uzantısını belirterek yapıyoruz.
+
+touch dosya.php [enter]
+// webisleri klasörü altında dosya.php adı ve uzantısında bir dosya oluşturduk.
+
+Eğer biz bu dosyaya, terminal üzerinden bir şeyler eklemek istersek; bu sefer vi komutunu kullanmalıyız. vi, terminal editörüdür.
+vi yazıp açmak istediğimiz dosyanın yolunu yazıyoruz:
+
+vi dosya.php [enter]
+// şu anda dosya.php dosyasının içerisine, vi editörü yoluyla girdik.
+burada herhangi bir şey yazabilmek için; ilk olarak i tuşuna basmamız gerekiyor.
+i tuşuna bastığımızda, pencerenin sol altındaki yazı -> -- INSERT --'e dönüşüyor.
+// anlamı, bu dosysaya bir şeyler ekleyebileceğimizdir.
+sonrasında, tezt editörü gibi içerisine yazabiliyoruz.
+
+bu editörden çıkmak için ise, önce Esc tuşuna, daha sonra : koyduktan sonra bazı harfler yazmamız gerekiyor:
+ilk harf -> w (write; yazmak anlamında)
+sonrasında hemen yanına -> q (quit; çıkış anlamında)
+
+wq [enter] 
+// çıkış yapıyoruz.
+
+eğer biz bu dosyayı Sublime text ile açarsak, yaptığımız değişiklikleri görebiliriz.
+subl dosya.php [enter]
+// ayrı bir pencerede dosya.php açılır.
+
+BİR DOSYAYI SİLMEK -> rm (remove) komutu
+
+rm dosya.php [enter]
+// dosyamız silinir.
+
+Eğer, bir klasörü silmek istersek -> rm -r (recorsive) -> içerisindeki her şey ile birlikte siliyor.
+
+rm -r [enter]
+// burada, silmek istediğimiz klasörün halihazırda içerisinde olduğumuzdan, hiçbir işlem yapmayacak.
+
+cd .. [enter]
+// diyerek bir geri geldik.
+
+rm -r webisleri [enter]
+// webisleri klasörünü sildik.
