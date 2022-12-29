@@ -33,5 +33,15 @@ eğer biz bu klasör altındakileri ls -a komutuyla tekrar çalıştırırsak, .
 ls -a [enter]
      .git
      
-şimdi, herhangi bir çalışma alanımıza yani daha önceden oluşturduğumuz bir çalışma alanına git init komutunu nasıl uygulayacağımızı görelim:
+şimdi, herhangi bir çalışma alanımıza "yani daha önceden oluşturduğumuz bir çalışma alanına" git init komutunu nasıl uygulayacağımızı görelim:
 
+cd .. komutu ile bu klaösrden bir geriye çıkalım.
+
+mesela masaüstünde daha önceden oluşturduğumuz workset isimli bir klasör olsun. 
+bu klasörün içerisine doğru ilerliyoruz:
+
+cd workset [enter]
+// şimdi ise bu klasörün içerisindekileri ekrana yazdıralım (gizli dosyalar dahil):
+ls -a [enter]
+// bu klasör içerisinde önceden index.html ve style.css dosyaları varmış.
+biz bu workset klasöründe daha önceden git init komutu ile git repository'si oluşturmadık.
