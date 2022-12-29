@@ -1,0 +1,8 @@
+Tarayıcı: www.git-scm.com -> dowloads (windows'u seçiyoruz).
+indirilen dosyayı çalıştırıyoruz.
+kurulum sihirbazı ile kurulumu yapıyoruz.
+
+// GIT, bilgisayarımıza 3 farklı arayüz kuruyor:
+1. GIT GUI: Graphical User Interface. Komut satırı kullanmadan, GIT'i kullanmak için bir arayüz.
+2. GIT CMD: Windows command prompt ile benzer şekilde çalışır. Eğer command prompt kullanımına alışkınsanız, bunu da kullanabilirsiniz.
+3. GIT Bash: Linux işletim sistemininkine benzer bir komut giriş arayüzü sunar.
