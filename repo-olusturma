@@ -45,3 +45,27 @@ cd workset [enter]
 ls -a [enter]
 // bu klasör içerisinde önceden index.html ve style.css dosyaları varmış.
 biz bu workset klasöründe daha önceden git init komutu ile git repository'si oluşturmadık.
+eğer biz bu klasör altında herhangi bir git komutunu çalıştırırsak, bir hata ile karşılaşacağız:
+
+ör: git add [enter] yaptık.
+(git add index.html [enter] yaptık)
+
+"fatal: Not a git repository (or any of the parent directories): git"
+şeklinde geriye bir fatal error döndürdü.
+anlamı -> ölümcül bir hatadır.
+bu klasörün altında bir repository olmadığını, yani .git isimli bir dosyanın halihazırda olmadığını/kurulmadığını söylüyor.
+
+bunu hemen oluşturalım:
+
+git init [enter]
+// şimfi bu klaösrümüz altında da bir git repository'si oluşturulacak.
+
+ls -a [enter]
+bu kod ile tekrar klasör içersini listeliyoruz. 
+    .git   index.html     style.css
+// bakın, şimdi .git isimli gizli bir dosyamız da buraya dahil oldu. 
+
+daha önce çalıştırdığımız git komutunu tekrar çalıştıralım:
+
+git add index.html [enter]
+// herhangi bir işlem geriye döndürmedi. yani bu komut başarıyla çalıştırıldı.
