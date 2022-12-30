@@ -1,0 +1,132 @@
+STAGING AREA (Git add ve Git status):
+
+repo oluşturma konusunda, git init komutuyla çalışma dizini'mize "git repository" kurduk.
+
+git repository kurduğumuda, halihazırda mevcut olan çalışma dizinimize ek olarak:
+
+1. Staging Area
+2. Local Repository kuruluyor.
+
+Bunlar, git'in kurulumuyla bizim çalışma alanımıza/dizinimize eklenen alanlardır.
+
+LOCAL REPOSITORY: Bizim git için depo alanımızdır.
+  Yani biz git ile bir dosya saklamak istediğimizde ya da bir versiyon oluşturmak istediğimizde, bu dosyaları local repository'e ulaştırmamız gerekiyor.
+  Local repository'e bir dosya ulaştırmadan önce, dosyalarımızı STAGING AREA'ya taşıyoruz.
+  
+STAGING AREA: Bir index'leme alanıdır.
+  Local repository bu alandan gelen dosyaları kabul ediyor.
+  
+şimdi terminalimizi açıp kaldığımız yerden devam ediyoruz:
+
+yan yana iki terminal açalım -> biri git-egitimi klasörü, biri de workset klasörü için.
+
+ilk terminalde git-egitimi adlı klasöre ilerliyoruz:
+cd Desktop/git-egitimi [enter]
+
+ikinci terminalde ise workset adlı klasöre ilerliyoruz:
+cd Desktop/workset [enter]
+
+git status komutu -> bizim commit ettiğimiz, yani local repository'e taşıdığımız dosyalarla çalışma dizinimizin arasındaki farklılıkları gösteren bir komuttur.
+
+git-egitimi klasörü için:
+
+git status [enter]
+// ekran çıktısı olarak herhangi bir şey gelmeyecek. sadece commit olmadığından ve çalıştığımız BRANCH (dal)'tan bahsedecek.
+
+On branch master // master branch altında çalıştığımızı belirtiyor.
+No commits yet // henüz bir commit işlemi yapılmadığını belirtiyor.
+nothing to commit (create/copy and use "git add" to track) // en alttaki log'da bunu döndürüyor. herhangi bir dosyanın commitiçin hazır olmadığından bahsediyor. zaten bu klasör içerisinde herhangi bir dosya yoktu :)
+
+workset klasörü için:
+bu klasör için ise, zaten halihazırda bir git repository'si oluşturmuş ve sonra da bir git komutu çalıştırmıştık (git add index.html)
+bu komut, bizim çalışma alanımızdaki dosyamızı staging area'ya göndermek için kullandığımız bir komuttur.
+
+git status [enter]
+// bu komut ile değişiklik/farklılık var mı bakalım:
+
+On branch master
+No commits yet
+
+Changes to be committed: // yeşil, yani commit için hazır!
+  (use "git rm --cached <file> ..." to unstage)
+          new file:       index.html
+          (yeşil)          (yeşil)
+          
+Untracked files:
+  (use "git add <file> ..." to include in what will be committed)
+          style.css
+          (kırmızı)
+          
+biz dosyamızı staging area'ya taşıdığımızda, git kendi algoritmalarını kullanarak gönderdiğimiz dosyalar üzerinde bir index'leme gerçekleştiriyor.
+bu indexleme, bizim bu dosyaları locak repository'mizde çalıştırmamız için bir gerekliliktir.
+
+şimdi, git-egitimi adlı klasörün altında bir dosya oluşturacağız ve o dosyayı add komutuyla staging area'ya taşıyacağız:
+
+DOSYAYI OLUŞTURMA:
+git birçok dosya formatını desteklediği için örnek olarak .txt uzantılı bir dosya kullanalım:
+
+touch yazi.txt [enter]
+
+şimdi, git status komutunu çalıştırdığımızda, sadece bu klasör altında yazi.txt adlı dosyadan bahsedilecek ve untracked files listesi altında (kırmızı olarak) görülecek.
+bunun anlamı, bu dosyanın henüz staging area'ya taşınmadığından, yani indexlenmediğinden bahseden bir raporlama (log) dönülecek.
+
+git status [enter]
+
+Untracked files:
+  (use "git add <file> ..." to include in what will be committed)
+          yazi.txt
+          (kırmızı)
+          
+nothing added to .......  // isterseniz untracked files'ı add komutuyla ekleyebilirsiniz diyor.
+
+add, staging area'ya taşıma komutumuzdu (kırmızıyı yeşil yapıyordu)
+
+git add yazi.txt [enter]
+// şu anda geriye herhangi bir şey/değer döndürmedi.
+
+git status [enter]
+
+Changes to be committed:  // listesi altında
+  yazi.txt
+  (yeşil)
+  
+yani commit edilmek için, yani local repository'e taşınmak için hazır bir halde diyor!
+
+DOSYAYI UNTRACKED YAPMA:
+şimdi, staging area'ya yanlışlıkla eklediğimiz ya da staging area'da artık bulunmasını istemediğimiz dosyaları nasıl untracked files listesine "geri döndüreceğimizi" görelim (yani yeşilden tekrar kırmızı yapmak istiyoruz):
+
+aslında git bize burada, bunu nasıl yapacağımızdan da bahsediyor:
+
+git rm --caxhed <dosya adi> // diyerek :)
+
+Ör: workset klasörünün terminalinde:
+
+git rm --cached index.html [enter]
+// şu anda index.html dosyası takipten çıkarıldı yani staging area'dan geri çıkarıldı. Ama halen çalışma alanımızın içinde duruyor!
+
+değişillikleri status komutuyla görelim:
+
+git status [enter]
+
+Untracked files:
+  index.html (kırmızı)
+  style.css (kırmızı)
+  
+// anlamı -> herangi bir izleme ya da işaretleme olmadığı anlamına geliyor.
+
+TÜM DOSYALARI STAGING AREA'YA GÖNDERMEK:
+bir klasör altındaki TÜM DOSYALARI ya da dizinleri staging area'ya taşımak için .(nokta) sembolünü kullanıyoruz.
+
+git add . [enter]
+// git add boşuk nokta
+
+burada nokta(.) -> bütün bir klasörün, indexlenmek üzere staging area'ya taşınması için bir semboldür.
+bu komuttan sonra da geriye bir değer döndürülmez, yani başarıyla çalıştırılır.
+
+şimdi tekrar status komutuyla listeyi görelim:
+
+git status [enter]
+
+Changes to be committed: // listesi altına tüm doyalar taşınmış, hepsi de yeşil olmuş olur :)
+  index.html (yeşil)
+  style.css (yeşil)
